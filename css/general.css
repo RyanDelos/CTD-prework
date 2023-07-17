@@ -28,7 +28,6 @@ html {
 body {
   background: var(--black);
   color: var(--white);
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Star Wars', sans-serif;
   min-height: 100vh;
   position: relative;
