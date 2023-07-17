@@ -1,0 +1,69 @@
+:root {
+  --black: #0b0303;
+  --black-rgb: rgba(0, 0, 0, 0.8);
+  --blue: #2e67f8;
+  --red: #eb212e;
+  --yellow: #ffe81f;
+  --white: #eaeef2;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.625rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* General CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Star Wars', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container-width {
+  max-width: 120rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer,
+.films-footer {
+  background: var(--yellow);
+  color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+}
+
+.display-block {
+  display: block;
+}

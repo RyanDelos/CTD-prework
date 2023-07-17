@@ -1,0 +1,243 @@
+/* :root {
+  --black: #0b0303;
+  --black-rgb: rgba(0, 0, 0, 0.8);
+  --blue: #2e67f8;
+  --red: #eb212e;
+  --yellow: #ffe81f;
+  --white: #eaeef2;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.625rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --container-width: 120rem;
+} */
+
+/******* Header Homapage *******/
+.heading-container,
+.film-heading-container {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.yellow-char {
+  color: var(--yellow);
+}
+
+.site-title {
+  display: inline-block;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  position: relative;
+}
+
+.site-title::before,
+.site-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: -10px;
+  transition: transform 0.25s ease-out;
+  border-radius: 7px 7px 2px 2px;
+}
+
+.site-title::before {
+  left: 50%;
+  background-color: var(--blue);
+  transform-origin: bottom right;
+  box-shadow: 8px 8px 20px 8px var(--blue);
+}
+
+.site-title::after {
+  right: 50%;
+  background-color: var(--red);
+  box-shadow: 8px 8px 20px 8px var(--red);
+}
+
+.site-title:hover::before,
+.site-title:hover::after {
+  transform: scaleX(1);
+  width: 50%;
+}
+
+.site-title:hover::before {
+  transition-delay: 0.1s;
+}
+
+.site-title:hover::after {
+  transition-delay: 0s;
+}
+
+/********* Main Homepage **********/
+.category {
+  width: 30%;
+  position: relative;
+}
+
+.category-image {
+  width: 100%;
+  height: 18.75rem;
+  object-fit: cover;
+}
+
+.category-title {
+  background-color: var(--black-rgb);
+  font-family: 'Star Wars', sans-serif;
+  color: var(--red);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+/********* Character Page *********/
+
+.slash {
+  padding: 0 1rem;
+}
+
+.main-pg-char {
+  padding: 0 3rem 5rem;
+}
+
+.char-content-container {
+  font-family: 'Open Sans', sans-serif;
+  padding: 3rem 0.5rem 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.char-result-box {
+  width: 100%;
+}
+
+/******** Films Page *********/
+.main-pg-films {
+  padding-bottom: 5rem;
+}
+
+.navigation,
+.navigation-film {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.char-navigation {
+  gap: 10rem;
+}
+
+.home-nav {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.home-nav:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.current-page {
+  color: yellow;
+}
+
+.previous,
+.next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  letter-spacing: 2px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.previous {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.next {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.content-container {
+  font-family: 'Open Sans', sans-serif;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.result-box {
+  width: auto;
+}
+
+.result-box,
+.char-result-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--white);
+  color: var(--black);
+  gap: 1rem;
+  border: 2px solid yellow;
+}
+
+.overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: var(--black-rgb);
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border-width: 10px;
+  border-color: var(--red);
+  border-top-color: var(--white);
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-brands {
+  color: var(--black);
+}

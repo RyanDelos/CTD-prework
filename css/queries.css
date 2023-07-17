@@ -1,0 +1,145 @@
+/* 
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV 
+*/
+
+/* HOME PAGE */
+
+@media (max-width: 45rem) {
+  .main {
+    gap: var(--spacing-lg);
+  }
+  .container-width {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .header-container {
+    padding: 1rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    letter-spacing: 15px;
+  }
+
+  .category {
+    width: 45%;
+  }
+
+  .footer {
+    gap: var(--spacing-sm);
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .heading-container {
+    padding: 1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .film-category {
+    padding-bottom: 3rem;
+  }
+
+  .category {
+    width: 85%;
+  }
+
+  .footer {
+    padding: 0.5rem;
+  }
+}
+
+/* CHARACTER PAGE */
+
+@media (max-width: 55rem) {
+  .navigation {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    flex-direction: column;
+  }
+
+  .char-content-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer {
+    gap: var(--spacing-sm);
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 41rem) {
+  .main-pg-char {
+    margin-bottom: 3rem;
+  }
+
+  .container-width {
+    padding: 0 1rem;
+  }
+
+  .char-content-container {
+    font-size: 0.75rem;
+    padding: 0 1rem 4rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .char-navigation {
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.75rem;
+  }
+
+  .page-nav {
+    font-size: 0.75rem;
+  }
+
+  .char-content-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FILM PAGE */
+
+@media (max-width: 56rem) {
+  .main-pg-films {
+    padding: 0 1rem 5rem;
+  }
+
+  .film-heading-container {
+    margin-bottom: var(--spacing-lg);
+    padding: 1rem 2rem;
+  }
+
+  .navigation-film {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 45rem) {
+  .content-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 1rem;
+  }
+
+  .films-footer {
+    font-size: 0.75rem;
+    gap: var(--spacing-sm);
+    padding: 1rem 0.5rem;
+  }
+}
