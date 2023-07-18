@@ -3,6 +3,8 @@
 const contentContainer = document.querySelector('.content-container');
 const overlay = document.querySelector('.overlay');
 const resultBox = document.querySelector('.result-box');
+const currentYear = new Date().getFullYear();
+let year = document.querySelector('.year');
 
 const filmUrl = `https://swapi.dev/api/films/`;
 
@@ -42,3 +44,5 @@ async function fetchFilm() {
 }
 
 fetchFilm();
+
+year.innerText = currentYear;
